@@ -6,6 +6,7 @@ const loadMeats = (onMeatLoad, onMeatError) => {
 	meatLoader.addEventListener('error', onMeatError);
 	meatLoader.open('GET', '../data/meats.json');
 	meatLoader.send();
+	console.log("meats", loadMeats)
 };
 
 const loadBreads = (onBreadLoad, onBreadError) => {

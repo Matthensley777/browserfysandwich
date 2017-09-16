@@ -18,11 +18,11 @@ let finalPrice = document.getElementById("finalPrice");
 
 breadChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
-        var breadPrice = SandwichMaker.setBread(event.target.value);
+        var breadPrice = SandwichMaker.getBread(event.target.value);
         SandwichMaker.addTopping(breadPrice);
 
     } else if (event.target.checked === false) {
-        var breadPrice = SandwichMaker.setBread(event.target.value) * -1;
+        var breadPrice = SandwichMaker.getBread(event.target.value) * -1;
         SandwichMaker.addTopping(breadPrice);
     }
 
@@ -30,33 +30,33 @@ breadChooser.addEventListener("change", function(event) {
 
 meatChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
-        var meatPrice = SandwichMaker.setMeats(event.target.value);
+        var meatPrice = SandwichMaker.getMeats(event.target.value);
         SandwichMaker.addTopping(meatPrice);
 
     } else if (event.target.checked === false) {
-        var meatPrice = SandwichMaker.setMeats(event.target.value) * -1;
+        var meatPrice = SandwichMaker.getMeats(event.target.value) * -1;
         SandwichMaker.addTopping(meatPrice);
     }
 });
 
 vegieChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
-        var vegiePrice = SandwichMaker.setVegies(event.target.value);
+        var vegiePrice = SandwichMaker.getVegies(event.target.value);
         SandwichMaker.addTopping(vegiePrice);
 
     } else if (event.target.checked === false) {
-        var vegiePrice = SandwichMaker.setVegies(event.target.value) * -1;
+        var vegiePrice = SandwichMaker.getVegies(event.target.value) * -1;
         SandwichMaker.addTopping(vegiePrice);
     }
 });
 
 cheeseChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
-        var cheesePrice = SandwichMaker.setCheese(event.target.value);
+        var cheesePrice = SandwichMaker.getCheese(event.target.value);
         SandwichMaker.addTopping(cheesePrice);
 
     } else if (event.target.checked === false) {
-        var cheesePrice = SandwichMaker.setCheese(event.target.value) * -1;
+        var cheesePrice = SandwichMaker.getCheese(event.target.value) * -1;
         SandwichMaker.addTopping(cheesePrice);
     }
 
@@ -64,11 +64,11 @@ cheeseChooser.addEventListener("change", function(event) {
 
 condimentChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
-        var consPrice = SandwichMaker.setCons(event.target.value);
+        var consPrice = SandwichMaker.getCons(event.target.value);
         SandwichMaker.addTopping(consPrice);
 
     } else if (event.target.checked === false) {
-        var consPrice = SandwichMaker.setCons(event.target.value) * -1;
+        var consPrice = SandwichMaker.getCons(event.target.value) * -1;
         SandwichMaker.addTopping(consPrice);
     }
 
