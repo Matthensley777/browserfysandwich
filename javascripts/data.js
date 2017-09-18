@@ -1,37 +1,41 @@
 "use strict";
+console.log("data");
 
-const loadMeats = require('./meats');
-const loadBreads = require('./bread');
-const loadCheese = require('./cheese');
-const loadCons = require('./cons');
-const loadVegies = require('./vegies');
+const loadSandwichIngrediants = require('./sandwich'); 
+
+let meatArray = [];
+let breadsArray = [];
+let cheeseArray = [];
+let vegiesArray = [];
+let consArray = [];
 
 const errorFunction = () => {
 	console.log("Hell to the naw!");
 };
+
 
 const whenMeatsLoad = function() {
 	meatArray = JSON.parse(this.responseText).meats;
 };
 
 const whenBreadsLoad = function() {
-	let breadsArray = JSON.parse(this.responseText).bread;
+	breadsArray = JSON.parse(this.responseText).bread;
 };
 
 const whenCheeseLoad = function() {
-	let cheeseArray = JSON.parse(this.responseText).cheese;
+	cheeseArray = JSON.parse(this.responseText).cheese;
 };
 
 const whenVegiesLoad = function() {
-	let vegiesArray = JSON.parse(this.responseText).vegies;
+	vegiesArray = JSON.parse(this.responseText).vegies;
 };
 
 const whenConsLoad = function() {
-	let consArray = JSON.parse(this.responseText).cons;
+	consArray = JSON.parse(this.responseText).cons;
 };
 
-const sandwichCall = () => {
-	loadSandwich(whenMeatsLoad, whenBreadsLoad, whenCheeseLoad, whenVegiesLoad, whenConsLoad, errorFunction);
+const SandwichMaker = () => {
+	loadSandwichIngrediants(whenMeatsLoad, whenBreadsLoad, whenCheeseLoad, whenVegiesLoad, whenConsLoad, errorFunction);
 };
 
 const getMeats = () => {
@@ -57,8 +61,15 @@ const getCons = () => {
 
 
 
+module.exports = {SandwichMaker, getMeats, getBread, getCheese, getVegies, getCons};
 
-module.exports = {sandwichCall, getMeats, getBreads, getCheese, getVegies, getCons};
+
+
+
+
+
+
+
 
 
 

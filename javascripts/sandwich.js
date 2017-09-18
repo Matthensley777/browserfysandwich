@@ -1,12 +1,15 @@
 "use strict";
 
+console.log("sandwich");
+
+const dataPage = require('./data')
+
 const loadMeats = (onMeatLoad, onMeatError) => {
 	const meatLoader = new XMLHttpRequest();
 	meatLoader.addEventListener('load', onMeatLoad);
 	meatLoader.addEventListener('error', onMeatError);
 	meatLoader.open('GET', '../data/meats.json');
 	meatLoader.send();
-	console.log("meats", loadMeats)
 };
 
 const loadBreads = (onBreadLoad, onBreadError) => {

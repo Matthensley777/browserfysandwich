@@ -1,4 +1,8 @@
 "use strict";
+console.log("events");
+
+const ingrediants = require('./data');
+const clickActions = require('./main')
 
 let finalSandwichPrice = 0;
 
@@ -75,6 +79,34 @@ condimentChooser.addEventListener("change", function(event) {
 });
 
 document.getElementById("button").addEventListener("click", function() {
-    finalSandwichPrice = SandwichMaker.getTotalPrice();
-    finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
+	finalSandwichPrice = SandwichMaker.getTotalPrice();
+	finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
 });
+
+
+
+
+module.exports = ??;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

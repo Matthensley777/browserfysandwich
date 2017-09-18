@@ -1,4 +1,7 @@
 "use strict";
+console.log("main");
+const doAll = require('./sandwich');
+const eventPage = require('./events');
 
 const SandwichMaker = (function() {
 
