@@ -2,7 +2,7 @@
 
 console.log("sandwich");
 
-const dataPage = require('./data')
+const dataPage = require('./data');
 
 const loadMeats = (onMeatLoad, onMeatError) => {
 	const meatLoader = new XMLHttpRequest();

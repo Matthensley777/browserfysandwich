@@ -1,8 +1,8 @@
 "use strict";
 console.log("events");
 
-const ingrediants = require('./data');
-const clickActions = require('./main')
+const dataPage = require('./data');
+const clickActions = require('./main');
 
 let finalSandwichPrice = 0;
 
@@ -25,68 +25,68 @@ breadChooser.addEventListener("change", function(event) {
         var breadPrice = SandwichMaker.getBread(event.target.value);
         SandwichMaker.addTopping(breadPrice);
 
-    } else if (event.target.checked === false) {
-        var breadPrice = SandwichMaker.getBread(event.target.value) * -1;
-        SandwichMaker.addTopping(breadPrice);
+    // } else if (event.target.checked === false) {
+    //     var breadPrice = SandwichMaker.getBread(event.target.value) * -1;
+    //     SandwichMaker.addTopping(breadPrice);
     }
 
 });
 
-meatChooser.addEventListener("change", function(event) {
-    if (event.target.checked === true) {
-        var meatPrice = SandwichMaker.getMeats(event.target.value);
-        SandwichMaker.addTopping(meatPrice);
+// meatChooser.addEventListener("change", function(event) {
+//     // if (event.target.checked === true) {
+//     //     var meatPrice = SandwichMaker.getMeats(event.target.value);
+//     //     SandwichMaker.addTopping(meatPrice);
 
-    } else if (event.target.checked === false) {
-        var meatPrice = SandwichMaker.getMeats(event.target.value) * -1;
-        SandwichMaker.addTopping(meatPrice);
-    }
-});
+//     // } else if (event.target.checked === false) {
+//     //     var meatPrice = SandwichMaker.getMeats(event.target.value) * -1;
+//     //     SandwichMaker.addTopping(meatPrice);
+//     // }
+// });
 
-vegieChooser.addEventListener("change", function(event) {
-    if (event.target.checked === true) {
-        var vegiePrice = SandwichMaker.getVegies(event.target.value);
-        SandwichMaker.addTopping(vegiePrice);
+// vegieChooser.addEventListener("change", function(event) {
+//     // if (event.target.checked === true) {
+//     //     var vegiePrice = SandwichMaker.getVegies(event.target.value);
+//     //     SandwichMaker.addTopping(vegiePrice);
 
-    } else if (event.target.checked === false) {
-        var vegiePrice = SandwichMaker.getVegies(event.target.value) * -1;
-        SandwichMaker.addTopping(vegiePrice);
-    }
-});
+//     // // } else if (event.target.checked === false) {
+//     // //     var vegiePrice = SandwichMaker.getVegies(event.target.value) * -1;
+//     // //     SandwichMaker.addTopping(vegiePrice);
+//     // }
+// });
 
-cheeseChooser.addEventListener("change", function(event) {
-    if (event.target.checked === true) {
-        var cheesePrice = SandwichMaker.getCheese(event.target.value);
-        SandwichMaker.addTopping(cheesePrice);
+// cheeseChooser.addEventListener("change", function(event) {
+//     // if (event.target.checked === true) {
+//     //     var cheesePrice = SandwichMaker.getCheese(event.target.value);
+//     //     SandwichMaker.addTopping(cheesePrice);
 
-    } else if (event.target.checked === false) {
-        var cheesePrice = SandwichMaker.getCheese(event.target.value) * -1;
-        SandwichMaker.addTopping(cheesePrice);
-    }
+//     // // } else if (event.target.checked === false) {
+//     // //     var cheesePrice = SandwichMaker.getCheese(event.target.value) * -1;
+//     // //     SandwichMaker.addTopping(cheesePrice);
+//     // }
 
-});
+// });
 
-condimentChooser.addEventListener("change", function(event) {
-    if (event.target.checked === true) {
-        var consPrice = SandwichMaker.getCons(event.target.value);
-        SandwichMaker.addTopping(consPrice);
+// condimentChooser.addEventListener("change", function(event) {
+//     // if (event.target.checked === true) {
+//     //     var consPrice = SandwichMaker.getCons(event.target.value);
+//     //     SandwichMaker.addTopping(consPrice);
 
-    } else if (event.target.checked === false) {
-        var consPrice = SandwichMaker.getCons(event.target.value) * -1;
-        SandwichMaker.addTopping(consPrice);
-    }
+//     // // } else if (event.target.checked === false) {
+//     // //     var consPrice = SandwichMaker.getCons(event.target.value) * -1;
+//     // //     SandwichMaker.addTopping(consPrice);
+//     // }
 
-});
+// });
 
-document.getElementById("button").addEventListener("click", function() {
-	finalSandwichPrice = SandwichMaker.getTotalPrice();
-	finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
-});
-
-
+// // document.getElementById("button").addEventListener("click", function() {
+// // 	finalSandwichPrice = SandwichMaker.getTotalPrice();
+// // 	finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
+// // });
 
 
-module.exports = ??;
+
+
+// module.exports = ??;
 
 
 

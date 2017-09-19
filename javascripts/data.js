@@ -16,6 +16,7 @@ const errorFunction = () => {
 
 const whenMeatsLoad = function() {
 	meatArray = JSON.parse(this.responseText).meats;
+	console.log("meats", meatArray);
 };
 
 const whenBreadsLoad = function() {

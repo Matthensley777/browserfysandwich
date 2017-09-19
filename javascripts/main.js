@@ -1,26 +1,29 @@
 "use strict";
 console.log("main");
-const doAll = require('./sandwich');
+
+const loadSandwichIngrediants = require('./sandwich');
 const eventPage = require('./events');
 
-const SandwichMaker = (function() {
+let totalPrice = 0;
 
-    // Private variable to store the price
-    let totalPrice = 0;
+// const SandwichMaker = function() {
 
-    // Return the public interface that other code can interact with
-    return {
-        addTopping: function(toppingPrice) {
-            totalPrice += toppingPrice;
-            return toppingPrice;
-        },
-        getTopping: function() {
-            return totalPrice;
-        },
-        getTotalPrice: function() {
-            return totalPrice;
-        }
-    };
-});
+//     // Private variable to store the price
+// };
+// Return the public interface that other code can interact with
 
-module.exports = SandwichMaker;
+const addTopping = (toppingPrice) => {
+    totalPrice += toppingPrice;
+    return toppingPrice;
+};
+
+const getTopping = () => {
+    return totalPrice;
+};
+
+const getTotalPrice = () => {
+    return totalPrice;
+};
+
+
+module.exports = {addTopping, getTopping, getTotalPrice};
