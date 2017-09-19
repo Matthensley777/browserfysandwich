@@ -3,8 +3,8 @@ console.log("events");
 
 const dataPage = require('./data');
 const loadSandwichIngrediants = require('./sandwich'); 
+const dom = require('./dom');
 
-const SandwichMaker = [];
 let finalSandwichPrice = 0;
 
 // Variable to hold topping that the user selects
@@ -24,12 +24,12 @@ const sandwichChoosers = () => {
 
 breadChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
-        var breadPrice = SandwichMaker.getBread(event.target.value);
-        SandwichMaker.addTopping(breadPrice);
+        var breadPrice = dataPage.getBread(event.target.value);
+        dom.addTopping(breadPrice);
 
     // } else if (event.target.checked === false) {
-    //     var breadPrice = SandwichMaker.getBread(event.target.value) * -1;
-    //     SandwichMaker.addTopping(breadPrice);
+    //     breadPrice.dom.getBread(event.target.value) * -1;
+    //     dom.addTopping(breadPrice);
     }
 
 });
@@ -80,13 +80,16 @@ breadChooser.addEventListener("change", function(event) {
 
 // });
 
-// // document.getElementById("button").addEventListener("click", function() {
-// // 	finalSandwichPrice = SandwichMaker.getTotalPrice();
-// // 	finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
-// // });
-
 
 };
+
+document.getElementById("button").addEventListener("click", function() {
+	finalSandwichPrice = dom.getTotalPrice();
+	finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
+});
+
+
+
 
 module.exports = sandwichChoosers;
 

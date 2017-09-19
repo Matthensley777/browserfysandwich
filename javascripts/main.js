@@ -2,6 +2,8 @@
 
 const dataPage = require('./data');
 const eventPage = require('./events');
+const dom = require('./dom');
+
 
 
 dataPage.getMeats();
@@ -14,4 +16,6 @@ dataPage.getVegies();
 
 dataPage.getCons();
 
-eventPage.SandwichMaker();
+eventPage();
+
+dataPage.SandwichMaker();

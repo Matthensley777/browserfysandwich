@@ -1,17 +1,15 @@
-
 "use strict";
-console.log("main");
+
+console.log("dom");
 
 const loadSandwichIngrediants = require('./sandwich');
 const eventPage = require('./events');
+const dataPage = require('./data');
+const dom = require('./dom');
+
+
 
 let totalPrice = 0;
-
-// const SandwichMaker = function() {
-
-//     // Private variable to store the price
-// };
-// Return the public interface that other code can interact with
 
 const addTopping = (toppingPrice) => {
     totalPrice += toppingPrice;

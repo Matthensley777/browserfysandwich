@@ -3,6 +3,8 @@ console.log("data");
 
 const loadSandwichIngrediants = require('./sandwich'); 
 const dataPage = require('./data');
+const dom = require('./dom');
+
 
 
 let meatArray = [];
@@ -23,22 +25,30 @@ const whenMeatsLoad = function() {
 
 const whenBreadsLoad = function() {
 	breadsArray = JSON.parse(this.responseText).bread;
+	console.log("breads", breadsArray);
 };
 
 const whenCheeseLoad = function() {
 	cheeseArray = JSON.parse(this.responseText).cheese;
+	console.log("cheese", cheeseArray);
 };
 
 const whenVegiesLoad = function() {
 	vegiesArray = JSON.parse(this.responseText).vegies;
+	console.log("vegies", vegiesArray);
 };
 
 const whenConsLoad = function() {
 	consArray = JSON.parse(this.responseText).cons;
+	console.log("cons", consArray);
 };
 
 const SandwichMaker = () => {
-	loadSandwichIngrediants(whenMeatsLoad, whenBreadsLoad, whenCheeseLoad, whenVegiesLoad, whenConsLoad, errorFunction);
+	loadSandwichIngrediants.loadMeats(whenMeatsLoad, errorFunction);
+	loadSandwichIngrediants.loadBreads(whenBreadsLoad, errorFunction);
+	loadSandwichIngrediants.loadCheese(whenCheeseLoad, errorFunction);
+	loadSandwichIngrediants.loadCons(whenConsLoad, errorFunction);
+	loadSandwichIngrediants.loadVegies(whenVegiesLoad, errorFunction);
 };
 
 const getMeats = () => {
