@@ -2,6 +2,8 @@
 console.log("data");
 
 const loadSandwichIngrediants = require('./sandwich'); 
+const dataPage = require('./data');
+
 
 let meatArray = [];
 let breadsArray = [];

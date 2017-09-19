@@ -2,8 +2,9 @@
 console.log("events");
 
 const dataPage = require('./data');
-const clickActions = require('./main');
+const loadSandwichIngrediants = require('./sandwich'); 
 
+const SandwichMaker = [];
 let finalSandwichPrice = 0;
 
 // Variable to hold topping that the user selects
@@ -19,6 +20,7 @@ let finalPrice = document.getElementById("finalPrice");
 
 
 
+const sandwichChoosers = () => {
 
 breadChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
@@ -84,9 +86,9 @@ breadChooser.addEventListener("change", function(event) {
 // // });
 
 
+};
 
-
-// module.exports = ??;
+module.exports = sandwichChoosers;
 
 
 
