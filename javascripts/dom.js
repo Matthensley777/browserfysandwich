@@ -3,9 +3,6 @@
 console.log("dom");
 
 const loadSandwichIngrediants = require('./sandwich');
-const eventPage = require('./events');
-const dataPage = require('./data');
-const dom = require('./dom');
 
 
 

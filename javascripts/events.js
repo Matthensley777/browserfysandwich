@@ -89,7 +89,9 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 
-sandwichChoosers();
+// const eventPage = {
+//     sandwichChoosers
+// };
 
 module.exports = sandwichChoosers;
 
