@@ -2,7 +2,7 @@
 
 const dataPage = require('./data');
 const eventPage = require('./events');
-const dom = require('./dom');
+const domPage = require('./dom');
 
 
 
@@ -19,3 +19,5 @@ dataPage.getCons();
 eventPage();
 
 dataPage.SandwichMaker();
+
+// eventPage.sandwichChoosers();

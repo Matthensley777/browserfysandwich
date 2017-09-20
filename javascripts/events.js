@@ -3,7 +3,7 @@ console.log("events");
 
 const dataPage = require('./data');
 const loadSandwichIngrediants = require('./sandwich'); 
-const dom = require('./dom');
+const domPage = require('./dom');
 
 let finalSandwichPrice = 0;
 
@@ -20,12 +20,12 @@ let finalPrice = document.getElementById("finalPrice");
 
 
 
-const sandwichChoosers = () => {
+const sandwichChoosers = (getBread) => {
 
 breadChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
         var breadPrice = dataPage.getBread(event.target.value);
-        dom.addTopping(breadPrice);
+        domPage.addTopping(breadPrice);
 
     // } else if (event.target.checked === false) {
     //     breadPrice.dom.getBread(event.target.value) * -1;
@@ -84,12 +84,12 @@ breadChooser.addEventListener("change", function(event) {
 };
 
 document.getElementById("button").addEventListener("click", function() {
-	finalSandwichPrice = dom.getTotalPrice();
+	finalSandwichPrice = domPage.getTotalPrice();
 	finalPrice.innerHTML = `total: $${finalSandwichPrice}`;
 });
 
 
-
+sandwichChoosers();
 
 module.exports = sandwichChoosers;
 
