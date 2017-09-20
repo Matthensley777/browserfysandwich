@@ -26,7 +26,6 @@ breadChooser.addEventListener("change", function(event) {
     if (event.target.checked === true) {
         var breadPrice = dataPage.getBread(event.target.value);
         domPage.addTopping(breadPrice);
-
     // } else if (event.target.checked === false) {
     //     breadPrice.dom.getBread(event.target.value) * -1;
     //     dom.addTopping(breadPrice);
