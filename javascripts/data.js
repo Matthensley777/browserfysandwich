@@ -20,27 +20,22 @@ const errorFunction = () => {
 
 const whenMeatsLoad = function() {
 	meatArray = JSON.parse(this.responseText).meats;
-	console.log("meats", meatArray);
 };
 
 const whenBreadsLoad = function() {
 	breadsArray = JSON.parse(this.responseText).bread;
-	console.log("breads", breadsArray);
 };
 
 const whenCheeseLoad = function() {
 	cheeseArray = JSON.parse(this.responseText).cheese;
-	console.log("cheese", cheeseArray);
 };
 
 const whenVegiesLoad = function() {
 	vegiesArray = JSON.parse(this.responseText).vegies;
-	console.log("vegies", vegiesArray);
 };
 
 const whenConsLoad = function() {
 	consArray = JSON.parse(this.responseText).cons;
-	console.log("cons", consArray);
 };
 
 const SandwichMaker = () => {
@@ -51,24 +46,26 @@ const SandwichMaker = () => {
 	loadSandwichIngrediants.loadVegies(whenVegiesLoad, errorFunction);
 };
 
-const getMeats = () => {
-	return meatArray;
+const getMeats = (value) => {
+	// console.log("meat", value);
+	return meatArray[0][value];
 };
 
-const getBread = () => {
-	return breadsArray;
+const getBread = (value) => {
+// console.log("bread", value);
+	return breadsArray[0][value];
 };
 
-const getCheese = () => {
-	return cheeseArray;
+const getCheese = (value) => {
+	return cheeseArray[0][value];
 };
 
-const getVegies = () => {
-	return vegiesArray;
+const getVegies = (value) => {
+	return vegiesArray[0][value];
 };
 
-const getCons = () => {
-	return consArray;
+const getCons = (value) => {
+	return consArray[0][value];
 };
 
 

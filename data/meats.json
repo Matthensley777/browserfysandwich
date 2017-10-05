@@ -1,8 +1,8 @@
 {
 	"meats": [{
 		"roastbeef": 1,
-		"turkey": ".50",
-		"ham": ".25",
-		"chicken": ".25"
+		"turkey": 2,
+		"ham": 2,
+		"chicken": 3
 	}]
 }

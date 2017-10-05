@@ -1,8 +1,8 @@
 {
 	"cons": [{
-		"mayo": ".27",
-		"oliveoil": ".23",
-		"ranch": ".25",
-		"bbq": ".21"
+		"mayo": 1,
+		"oliveoil": 2,
+		"ranch": 1,
+		"bbq": 6
 	}]
 }

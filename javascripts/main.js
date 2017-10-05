@@ -6,16 +6,6 @@ const domPage = require('./dom');
 
 
 
-dataPage.getMeats();
-
-dataPage.getBread();
-
-dataPage.getCheese();
-
-dataPage.getVegies();
-
-dataPage.getCons();
-
 eventPage();
 
 dataPage.SandwichMaker();

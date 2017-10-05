@@ -18,7 +18,10 @@ const getTopping = () => {
 };
 
 const getTotalPrice = () => {
+	console.log("price", totalPrice);
+
     return totalPrice;
+
 };
 
 

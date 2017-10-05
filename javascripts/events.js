@@ -23,61 +23,68 @@ let finalPrice = document.getElementById("finalPrice");
 const sandwichChoosers = (getBread) => {
 
 breadChooser.addEventListener("change", function(event) {
+    var breadPrice;
     if (event.target.checked === true) {
-        var breadPrice = dataPage.getBread(event.target.value);
+        breadPrice = dataPage.getBread(event.target.value);
+        console.log("breadPrice", breadPrice);
         domPage.addTopping(breadPrice);
-    // } else if (event.target.checked === false) {
-    //     breadPrice.dom.getBread(event.target.value) * -1;
-    //     dom.addTopping(breadPrice);
+    } else if (event.target.checked === false) {
+        breadPrice = dataPage.getBread(event.target.value) * -1;
+        domPage.addTopping(breadPrice);
     }
 
 });
 
-// meatChooser.addEventListener("change", function(event) {
-//     // if (event.target.checked === true) {
-//     //     var meatPrice = SandwichMaker.getMeats(event.target.value);
-//     //     SandwichMaker.addTopping(meatPrice);
+meatChooser.addEventListener("change", function(event) {
+    var meatPrice;
+    if (event.target.checked === true) {
+        meatPrice = dataPage.getMeats(event.target.value);
+        console.log("meat", meatPrice);
+        domPage.addTopping(meatPrice);
 
-//     // } else if (event.target.checked === false) {
-//     //     var meatPrice = SandwichMaker.getMeats(event.target.value) * -1;
-//     //     SandwichMaker.addTopping(meatPrice);
-//     // }
-// });
+    } else if (event.target.checked === false) {
+        meatPrice = dataPage.getMeats(event.target.value) * -1;
+        domPage.addTopping(meatPrice);
+    }
+});
 
-// vegieChooser.addEventListener("change", function(event) {
-//     // if (event.target.checked === true) {
-//     //     var vegiePrice = SandwichMaker.getVegies(event.target.value);
-//     //     SandwichMaker.addTopping(vegiePrice);
+vegieChooser.addEventListener("change", function(event) {
+    var vegiePrice;
+    if (event.target.checked === true) {
+        vegiePrice = dataPage.getVegies(event.target.value);
+        domPage.addTopping(vegiePrice);
 
-//     // // } else if (event.target.checked === false) {
-//     // //     var vegiePrice = SandwichMaker.getVegies(event.target.value) * -1;
-//     // //     SandwichMaker.addTopping(vegiePrice);
-//     // }
-// });
+    } else if (event.target.checked === false) {
+        vegiePrice = dataPage.getVegies(event.target.value) * -1;
+        domPage.addTopping(vegiePrice);
+    }
+});
 
-// cheeseChooser.addEventListener("change", function(event) {
-//     // if (event.target.checked === true) {
-//     //     var cheesePrice = SandwichMaker.getCheese(event.target.value);
-//     //     SandwichMaker.addTopping(cheesePrice);
+cheeseChooser.addEventListener("change", function(event) {
+    var cheesePrice;
+    if (event.target.checked === true) {
+        cheesePrice = dataPage.getCheese(event.target.value);
+        domPage.addTopping(cheesePrice);
 
-//     // // } else if (event.target.checked === false) {
-//     // //     var cheesePrice = SandwichMaker.getCheese(event.target.value) * -1;
-//     // //     SandwichMaker.addTopping(cheesePrice);
-//     // }
+    } else if (event.target.checked === false) {
+        cheesePrice = dataPage.getCheese(event.target.value) * -1;
+        domPage.addTopping(cheesePrice);
+    }
 
-// });
+});
 
-// condimentChooser.addEventListener("change", function(event) {
-//     // if (event.target.checked === true) {
-//     //     var consPrice = SandwichMaker.getCons(event.target.value);
-//     //     SandwichMaker.addTopping(consPrice);
+condimentChooser.addEventListener("change", function(event) {
+    var consPrice;
+    if (event.target.checked === true) {
+        consPrice = dataPage.getCons(event.target.value);
+        domPage.addTopping(consPrice);
 
-//     // // } else if (event.target.checked === false) {
-//     // //     var consPrice = SandwichMaker.getCons(event.target.value) * -1;
-//     // //     SandwichMaker.addTopping(consPrice);
-//     // }
+    } else if (event.target.checked === false) {
+        consPrice = dataPage.getCons(event.target.value) * -1;
+        domPage.addTopping(consPrice);
+    }
 
-// });
+});
 
 
 };
@@ -88,9 +95,7 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 
-// const eventPage = {
-//     sandwichChoosers
-// };
+
 
 module.exports = sandwichChoosers;
 

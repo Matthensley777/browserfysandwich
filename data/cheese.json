@@ -1,8 +1,8 @@
 {
 	"cheese": [{
-		"american": ".25",
-		"chedar": ".25",
-		"swiss": ".25",
-		"blue": ".25"
+		"american": 1,
+		"chedar": 1,
+		"swiss": 2,
+		"blue": 3
 	}]
 }

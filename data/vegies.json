@@ -1,8 +1,8 @@
 {
 	"vegies": [{
-		"tomato": ".53",
-		"lettus": ".52",
-		"pickle": ".51",
-		"olives": ".54"
+		"tomato": 1.53,
+		"lettus": 1.52,
+		"pickle": 1.51,
+		"olives": 1.54
 	}]
 }
